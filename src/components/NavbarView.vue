@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex">
+  <nav class="flex justify-between items-center">
     <!-- logo區 -->
     <router-link to="/">
       <div class="flex justify-center items-center mx-48">
@@ -16,6 +16,17 @@
         </router-link>
       </li>
     </ul>
+    <div class="flex justify-center items-center mx-48">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="/images/icon/fb.png" class="w-10 mx-2 hover:opacity-80" alt="icon">
+      </a>
+      <a href="https://line.me" target="_blank">
+        <img src="/images/icon/line.png" class="w-10 mx-2 hover:opacity-80" alt="icon">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="/images/icon/instagram.png" class="w-10 mx-2 hover:opacity-80" alt="icon">
+      </a>
+    </div>
   </nav>
 </template>
 
