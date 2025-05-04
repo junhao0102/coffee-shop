@@ -5,7 +5,7 @@
             <div class="w-1/3">
                 <h2 class="text-2xl font-bold mb-4">Subscribe for hot updates</h2>
                 <input type="text" class="mr-4 rounded-md px-2 py-1 text-gray-500" placeholder="Enter your email">
-                <button class="bg-white text-gray-500 rounded-md px-2 py-1">Subscribe</button>
+                <button class="text-white border border-white rounded-md px-2 py-1 hover:bg-white hover:text-gray-500">Subscribe</button>
             </div>
             <div class="w-1/3 pl-24">
                 <h2 class="text-2xl font-bold">Contact Us</h2>
@@ -19,6 +19,17 @@
                 <p>Contact Us</p>
                 <p>Shipping</p>
                 <p>Returns</p>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="/images/icon/fb.png" class="w-8 mx-3 hover:opacity-80" alt="icon">
+                </a>
+                <a href="https://line.me" target="_blank">
+                    <img src="/images/icon/line.png" class="w-8 mx-3 hover:opacity-80" alt="icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="/images/icon/instagram.png" class="w-8 mx-3 hover:opacity-80" alt="icon">
+                </a>
             </div>
         </div>
     </footer>
