@@ -5,7 +5,7 @@
     <div class="flex flex-row mx-12">
       <router-link to="/" class="flex items-center">
         <p class="text-3xl font-bold text-[#bfa46a]">JIM'S COFFEE</p>
-        <img src="/images/header.png" class="w-24" alt="logo">
+        <img src="/images/header.png" class="w-24" alt="logo" />
       </router-link>
     </div>
 
@@ -13,23 +13,23 @@
     <ul class="flex justify-center items-center mx-12">
       <li v-for="item in menu" :key="item.path" class="mx-4">
         <router-link :to="item.path" class="flex flex-col items-center group">
-          <span class="text-[#bfa46a] text-xl group-hover:text-yellow-500">{{ item.text }}</span>
+          <span class="text-[#bfa46a] text-xl group-hover:text-yellow-500">{{
+            item.text
+          }}</span>
         </router-link>
       </li>
     </ul>
-
   </nav>
 </template>
 
 <script setup>
 const menu = [
-  { path: '/', text: 'HOME' },
-  { path: '/news', text: 'NEWS' },
-  { path: '/menu', text: 'MENU' },
-  { path: '/recruit', text: 'RECRUIT' },
-  { path: '/contact', text: 'CONTACT' }
-]
-
+  { path: "/", text: "HOME" },
+  { path: "/news", text: "NEWS" },
+  { path: "/menu", text: "MENU" },
+  { path: "/recruit", text: "RECRUIT" },
+  { path: "/contact", text: "CONTACT" },
+];
 </script>
 
 <style scoped></style>

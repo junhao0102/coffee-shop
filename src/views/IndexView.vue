@@ -6,10 +6,6 @@
       <p class="text-white text-1xl font-bold mb-4">Cafe & Restaurant Est. 2025</p>
       <p class="text-white text-6xl font-bold mt-4 mb-8">A Story in Every Cup</p>
       <div class="flex gap-8 mt-4">
-        <button class="border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-black">View
-          Menu</button>
-        <button class="border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-black">View
-          Menu</button>
       </div>
     </div>
   </div>
@@ -19,7 +15,8 @@
       <p class="text-5xl font-bold mb-6">Eat</p>
       <p class="text-2xl text-gray-500 mb-1">Breakfast, Lunch, and Handcrafted Pastries</p>
       <p class="text-sm text-gray-500 mb-4">A taste of today, a memory for tomorrow</p>
-      <button class="border border-gray-500 text-gray-500 px-4 py-2 rounded-md hover:bg-gray-500 hover:text-white">See
+      <button class="border border-gray-500 text-gray-500 px-4 py-2 rounded-md hover:bg-gray-500 hover:text-white"
+        @click="goToRoute('/menu/mains')">See
         More</button>
     </div>
     <div class="w-1/2 relative overflow-hidden group" @mouseenter="startSlider('eat')" @mouseleave="stopSlider()">
@@ -53,7 +50,8 @@
       <p class="text-5xl font-bold mb-6">Drink</p>
       <p class="text-2xl text-gray-500 mb-1">The Freshest Cup in Town</p>
       <p class="text-sm text-gray-500 mb-4">Let the day unfold with every pour</p>
-      <button class="border border-gray-500 text-gray-500 px-4 py-2 rounded-md hover:bg-gray-500 hover:text-white">See
+      <button class="border border-gray-500 text-gray-500 px-4 py-2 rounded-md hover:bg-gray-500 hover:text-white"
+        @click="goToRoute('/menu/drink')">See
         More</button>
     </div>
   </div>
@@ -88,7 +86,7 @@
 <script setup>
 import FooterView from '../components/FooterView.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
-
+import { useRouter } from 'vue-router'
 // 目前顯示的圖片 index
 const currentEatIndex = ref(0)
 const currentDrinkIndex = ref(0)
@@ -112,12 +110,12 @@ const drinkImages = ref([
 let sliderTimer = null
 
 // 記錄目前正在啟動輪播的區塊（'eat' 或 'drink'）
-const activeSlider = ref(null) 
+const activeSlider = ref(null)
 
 // 根據傳入的 slider 名稱讓對應的圖片索引自動切換
-const startSlider = (slider) => {
+function startSlider(slider) {
   // 如果計時器已經啟動，則不會再啟動
-  if (sliderTimer) return 
+  if (sliderTimer) return
   activeSlider.value = slider
   sliderTimer = setInterval(() => {
     if (activeSlider.value === 'eat') {
@@ -129,7 +127,7 @@ const startSlider = (slider) => {
 }
 
 // 停止圖片輪播
-const stopSlider = () => {
+function stopSlider() {
   if (sliderTimer) {
     clearInterval(sliderTimer)
     sliderTimer = null
@@ -138,17 +136,17 @@ const stopSlider = () => {
 }
 
 // 點擊圓點切換 Eat 區域圖片
-const handleEatDotClick = (index) => {
+function handleEatDotClick(index) {
   currentEatIndex.value = index
 }
 
 // 點擊圓點切換 Drink 區域圖片
-const handleDrinkDotClick = (index) => {
+function handleDrinkDotClick(index) {
   currentDrinkIndex.value = index
 }
 
 // 根據當前 index 回傳 dot 的樣式
-const getDotClass = (index, currentIndex) => {
+function getDotClass(index, currentIndex) {
   return {
     'text-gray-500': currentIndex !== index,
     'text-2xl': currentIndex !== index,
@@ -159,13 +157,22 @@ const getDotClass = (index, currentIndex) => {
 }
 
 // 預先載入所有圖片，提高使用者體驗
-const preloadImages = () => {
+function preloadImages() {
   [...eatImages.value, ...drinkImages.value].forEach(src => {
     const img = new Image()
     img.src = src
   })
 }
 
+// 使用 router
+const router = useRouter()
+
+// 跳轉到指定路由
+function goToRoute(route) {
+  router.push(route).then(() => {
+    window.scrollTo(0, 0)
+  });
+}
 onMounted(() => {
   preloadImages()
 })
@@ -175,4 +182,4 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped></style> 
+<style scoped></style>
