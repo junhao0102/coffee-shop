@@ -2,7 +2,7 @@
   <!-- Banner 區域 -->
   <div class="mx-auto relative">
     <img class="w-full h-[700px] object-cover brightness-95" src="/images/index/coffee.jpg" alt="coffee">
-    <div class="absolute top-[50%] left-[20%] -translate-x-1/2 -translate-y-1/2 text-left">
+    <div class="absolute top-[50%] left-[25%] -translate-x-1/2 -translate-y-1/2 text-left">
       <p class="text-white text-1xl font-bold mb-4">Cafe & Restaurant Est. 2025</p>
       <p class="text-white text-6xl font-bold mt-4 mb-8">A Story in Every Cup</p>
       <div class="flex gap-8 mt-4">
@@ -79,6 +79,7 @@
     <img src="/images/index/gallery/gallery4.jpg" alt="gallery4" class="w-1/5 h-full object-cover">
     <img src="/images/index/gallery/gallery5.jpg" alt="gallery5" class="w-1/5 h-full object-cover">
   </div>
+  <div class="bg-white h-[50px]"></div>
   <!-- Footer 區域 -->
   <FooterView />
 </template>

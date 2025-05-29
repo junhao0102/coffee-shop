@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 py-4">
+  <div class="pt-4 pb-12 bg-amber-100">
     <!-- 菜單導航 -->
     <div class="flex justify-center space-x-8 mb-8">
       <router-link to="/menu/coffee" class="px-4 py-2 rounded-lg hover:bg-[#bfa46a] hover:text-white transition-colors"
@@ -26,8 +26,11 @@
     </div>
     <router-view></router-view>
   </div>
+  <FooterView />
 </template>
 
-<script setup></script>
+<script setup>
+import FooterView from '../components/FooterView.vue'
+</script>
 
 <style scoped></style>

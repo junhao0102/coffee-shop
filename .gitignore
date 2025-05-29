@@ -12,5 +12,9 @@ logs
 dist
 dist-ssr
 
+# OS
+.DS_Store
+
+
 
 

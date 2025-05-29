@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10">
+  <div class="grid grid-cols-3 gap-10 px-8 max-w-7xl mx-auto">
     <MenuItem v-for="item in items" :key="item.id" :item="item" />
   </div>
 </template>
