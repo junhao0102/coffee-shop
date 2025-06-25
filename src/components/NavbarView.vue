@@ -12,10 +12,9 @@
     <!-- 選單區 -->
     <ul class="flex justify-center items-center mx-12">
       <li v-for="item in menu" :key="item.path" class="mx-4">
-        <router-link :to="item.path" class="flex flex-col items-center group">
-          <span class="text-[#bfa46a] text-xl group-hover:text-yellow-500">{{
-            item.text
-          }}</span>
+        <router-link :to="item.path" class="flex flex-col items-center group" v-slot="{ isActive }">
+          <span class="text-[#bfa46a] text-xl group-hover:bg-[#bfa46a] group-hover:text-white px-2 py-2 rounded-lg"
+            :class="{ 'bg-[#bfa46a] text-white': isActive }">{{ item.text }}</span>
         </router-link>
       </li>
     </ul>
