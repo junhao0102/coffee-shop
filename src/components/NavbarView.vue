@@ -24,8 +24,8 @@
 <script setup>
 const menu = [
   { path: "/", text: "HOME" },
-  { path: "/news", text: "NEWS" },
   { path: "/menu", text: "MENU" },
+  { path: "/news", text: "NEWS" },
   { path: "/recruit", text: "RECRUIT" },
   { path: "/contact", text: "CONTACT" },
 ];
