@@ -2,7 +2,7 @@
   <div class="bg-amber-50 pb-16 flex flex-col items-center">
     <div class="text-6xl font-bold mt-16 mb-8 text-center text-[#bfa46a]">Recruit</div>
     <div class="flex flex-row justify-center gap-6 border-2 border-[#bfa46a] rounded-lg p-10 w-[1200px] ">
-      <img src="/images/recruit/side.jpg" class="w-[300px] h-[600px] object-cover rounded-lg brightness-90">
+      <img :src="base+'/images/recruit/side.jpg'" class="w-[300px] h-[600px] object-cover rounded-lg brightness-90">
       <RecruitList :recruitItems="recruitItems" />
     </div>
   </div>
@@ -12,6 +12,8 @@
 <script setup>
 import RecruitList from '../components/recruit/recruitList.vue'
 import FooterView from '../components/FooterView.vue'
+
+const base = import.meta.env.BASE_URL
 
 const recruitItems = [
   {

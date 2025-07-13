@@ -1,7 +1,7 @@
 <template>
   <!-- Banner 區域 -->
   <div class="mx-auto relative">
-    <img class="w-full h-[700px] object-cover brightness-95" src="/images/index/coffee.jpg" alt="coffee">
+    <img class="w-full h-[700px] object-cover brightness-95" :src="base+'/images/index/coffee.jpg'" alt="coffee">
     <div class="absolute top-[50%] left-[25%] -translate-x-1/2 -translate-y-1/2 text-left">
       <p class="text-white text-1xl font-bold mb-4">Cafe & Restaurant Est. 2025</p>
       <p class="text-white text-6xl font-bold mt-4 mb-8">A Story in Every Cup</p>
