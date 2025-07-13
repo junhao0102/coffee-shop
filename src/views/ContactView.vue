@@ -2,7 +2,7 @@
   <div class="bg-orange-100 pt-16 pb-16">
     <p class="text-[#bfa46a] text-6xl font-bold text-center mb-8">Contact Us</p>
     <div class="flex flex-row justify-center gap-10">
-      <img src="/images/contact/contact.jpg" alt="contact" class="w-[550px] h-[400px] object-cover brightness-90 rounded-lg shadow-md" />
+      <img :src="base+'/images/contact/contact.jpg'" alt="contact" class="w-[550px] h-[400px] object-cover brightness-90 rounded-lg shadow-md" />
       <div class="flex flex-col w-[550px] h-[400px] justify-center">
         <form @submit.prevent="submitForm" class="flex flex-col">
           <p class="contact-title">Name</p>
@@ -22,6 +22,8 @@
 <script setup>
 import FooterView from '../components/FooterView.vue'
 import { ref } from 'vue'
+
+const base = import.meta.env.BASE_URL
 
 const formData = ref({
   name: '',

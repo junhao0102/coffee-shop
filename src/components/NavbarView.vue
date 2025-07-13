@@ -5,7 +5,7 @@
     <div class="flex flex-row mx-12">
       <router-link to="/" class="flex items-center">
         <p class="text-3xl font-bold text-[#bfa46a]">JIM'S COFFEE</p>
-        <img src="/images/header.png" class="w-24" alt="logo" />
+        <img :src="base+'/images/header.png'" class="w-24" alt="logo" />
       </router-link>
     </div>
 
@@ -22,6 +22,8 @@
 </template>
 
 <script setup>
+const base = import.meta.env.BASE_URL
+
 const menu = [
   { path: "/", text: "HOME" },
   { path: "/menu", text: "MENU" },

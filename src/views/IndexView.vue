@@ -73,11 +73,11 @@
   </div>
   <!-- Gallery 區域 -->
   <div class="mx-auto w-full h-[300px] flex">
-    <img src="/images/index/gallery/gallery1.jpg" alt="gallery1" class="w-1/5 h-full object-cover">
-    <img src="/images/index/gallery/gallery2.jpg" alt="gallery2" class="w-1/5 h-full object-cover">
-    <img src="/images/index/gallery/gallery3.jpg" alt="gallery3" class="w-1/5 h-full object-cover">
-    <img src="/images/index/gallery/gallery4.jpg" alt="gallery4" class="w-1/5 h-full object-cover">
-    <img src="/images/index/gallery/gallery5.jpg" alt="gallery5" class="w-1/5 h-full object-cover">
+    <img :src="base+'/images/index/gallery/gallery1.jpg'" alt="gallery1" class="w-1/5 h-full object-cover">
+    <img :src="base+'/images/index/gallery/gallery2.jpg'" alt="gallery2" class="w-1/5 h-full object-cover">
+    <img :src="base+'/images/index/gallery/gallery3.jpg'" alt="gallery3" class="w-1/5 h-full object-cover">
+    <img :src="base+'/images/index/gallery/gallery4.jpg'" alt="gallery4" class="w-1/5 h-full object-cover">
+    <img :src="base+'/images/index/gallery/gallery5.jpg'" alt="gallery5" class="w-1/5 h-full object-cover">
   </div>
   <div class="bg-white h-[50px]"></div>
   <!-- Footer 區域 -->
@@ -88,22 +88,25 @@
 import FooterView from '../components/FooterView.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
+
+const base = import.meta.env.BASE_URL
+
 // 目前顯示的圖片 index
 const currentEatIndex = ref(0)
 const currentDrinkIndex = ref(0)
 
 // Eat 區域圖片 src
 const eatImages = ref([
-  '/images/index/eat/Eat1.jpg',
-  '/images/index/eat/Eat2.jpg',
-  '/images/index/eat/Eat3.jpg',
+  base+'/images/index/eat/Eat1.jpg',
+  base+'/images/index/eat/Eat2.jpg',
+  base+'/images/index/eat/Eat3.jpg',
 ])
 
 // Drink 區域圖片 src
 const drinkImages = ref([
-  '/images/index/drink/Drink1.jpg',
-  '/images/index/drink/Drink2.jpg',
-  '/images/index/drink/Drink3.jpg',
+  base+'/images/index/drink/Drink1.jpg',
+  base+'/images/index/drink/Drink2.jpg',
+  base+'/images/index/drink/Drink3.jpg',
 ])
 
 

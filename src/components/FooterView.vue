@@ -26,19 +26,21 @@
       </div>
       <div class="flex justify-center items-center">
         <a href="https://www.facebook.com" target="_blank">
-          <img src="/images/icon/fb.png" class="footer-icon" alt="icon" />
+          <img :src="base+'/images/icon/fb.png'" class="footer-icon" alt="icon" />
         </a>
         <a href="https://line.me" target="_blank">
-          <img src="/images/icon/line.png" class="footer-icon" alt="icon" />
+          <img :src="base+'/images/icon/line.png'" class="footer-icon" alt="icon" />
         </a>
         <a href="https://www.instagram.com" target="_blank">
-          <img src="/images/icon/instagram.png" class="footer-icon" alt="icon" />
+          <img :src="base+'/images/icon/instagram.png'" class="footer-icon" alt="icon" />
         </a>
       </div>
     </div>
   </footer>
 </template>
-<script setup></script>
+<script setup>
+const base = import.meta.env.BASE_URL
+</script>
 <style>
 .footer-title {
   @apply text-2xl font-bold mb-2;
