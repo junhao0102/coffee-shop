@@ -8,10 +8,6 @@ node_modules
 logs
 *.log
 
-# Dist
-dist
-dist-ssr
-
 # OS
 .DS_Store
 
